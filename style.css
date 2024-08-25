@@ -1,0 +1,95 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: rgb(61, 43, 124);
+    font-family: serif;
+    font-size: 50px;
+    position: fixed;
+    top: 0px;
+    left: 40%;
+    z-index: 2;
+    transform: translateX(-40%);  
+}
+.galleryContainer {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    padding: 0px;
+}
+#mainImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+.scrollBox{
+    width: 40%;
+    height: auto;
+    position: absolute;
+    top: 100px;
+    left: 45%;
+    overflow-x: auto;
+    display: flex;
+    transform: translateX(-40%);
+    padding: 7px;
+    z-index: 2;
+}
+.scrollBox img {
+    width: 80px;
+    height: 130px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.scrollBox img:hover{
+    transform: scale(1.1);
+}
+/* Media query for PC and larger screen */
+@media (max-width: 1700px) {
+    h1 {
+        font-size: 65px;
+        top: -20px;
+        left: 40%;
+        transform: translateX(-50);
+    }
+    #mainImage{
+        width: 100vw;
+        height: 100vh;
+    }
+    .scrollBox{
+        width: 50%;
+        top: 120;
+        left: 50;
+        transform: translateX(-50%);
+    }
+    .scrollBox img {
+        width: 110px;
+        height: 110px;
+    }
+}
+/* Media query for smaller screen */
+ @media (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+        left: 40%;
+        top: 20px;
+        transform: translateX(-50);
+    }
+    #mainImage{
+        width: 100vw;
+        height: 100vh;
+    }
+    .scrollBox{
+       width: 70%;
+       top: 95px;
+       left: 50%;
+       transform: translateX(-50%);
+    } 
+    .scrollBox img{
+        width: 50px;
+        height: 80px;
+    }
+} 
